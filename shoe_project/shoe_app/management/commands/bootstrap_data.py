@@ -18,7 +18,7 @@ class Command(BaseCommand):
         parser.add_argument('shoe_type', nargs='+', type=str)
 
     def handle(self, *args, **options):
-        new_shoe_type = ShoeType(style='shoe_type')
+        new_shoe_type = ShoeType(style=options['shoe_type'][0])
         new_shoe_type.save()
         self.stdout.write(self.style.SUCCESS('Successfully created ShoeType "%s"' % options['shoe_type']))
 

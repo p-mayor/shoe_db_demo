@@ -37,7 +37,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'shoe_project.shoe_app',
+    'shoe_project.shoe_app.apps.ShoeAppConfig',
     'rest_framework',
 ]
 
